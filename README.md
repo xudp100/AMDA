@@ -26,5 +26,5 @@ This will install the following dependencies:
 To run the classifier: 
 
 ```bash
-python classification_cifar10/main.py
+python classification_cifar10/main.py --optimizer AMDA
 ```
