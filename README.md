@@ -14,7 +14,7 @@ This repository implements a ResNet-based image classification system for [CIFAR
 We assume that you're using [Python 3.8+] installed. You need to run the following inside the root directory to install the dependencies:
 
 ```bash
-pip install torch, numpy, argparse, time, os
+pip install torch, numpy
 ```
 This will install the following dependencies:
 * [torch](https://pytorch.org/) (the library was tested on version 1.12.1+cu113)
