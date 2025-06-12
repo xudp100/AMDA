@@ -7,7 +7,7 @@ This repository implements a ResNet-based image classification system for [CIFAR
 	├── Model/
 	│ └── Resnet.py
 	├── Optimizer/
-	│ └── AdaVAM.py
+	│ └── AMDA.py
 	└── main.py
 
 ## Installation
