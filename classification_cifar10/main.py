@@ -59,7 +59,7 @@ def select_model(model_name, num_classes=10):
     else:
         raise ValueError(f"false: {model_name}")
 
-def select_optimizer(optimizer_name, net, train_loader):
+def select_optimizer(optimizer_name, net):
 
     if optimizer_name == 'SGD':
         return torch.optim.SGD(net.parameters(), lr=1e-1, momentum=0, dampening=0, weight_decay=5e-4)
@@ -122,7 +122,7 @@ def main():
     train_loader, test_loader = build_dataset()
 
     net = select_model(args.model, num_classes=10).to(device)
-    optimizer = select_optimizer(args.optimizer, net, train_loader)
+    optimizer = select_optimizer(args.optimizer, net)
     criterion = nn.CrossEntropyLoss().to(device)
     print(f"Using model: {args.model} with optimizer: {args.optimizer}")
     scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=150, gamma=0.1)
